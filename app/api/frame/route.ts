@@ -9,7 +9,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
-  if (!isValid || !message.following || !message.liked || !message.recasted) {
+  if (!isValid || !message.interactor.verified_accounts[0]/*|| !message.following || !message.liked || !message.recasted*/) {
     return new NextResponse(
       getFrameHtmlResponse({
         buttons: [
