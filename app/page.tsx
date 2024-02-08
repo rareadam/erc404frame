@@ -5,30 +5,28 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time!',
+      label: 'Free Mint!',
     },
     {
+      label: 'Link to DEX',
       action: 'link',
-      label: 'Link to Google',
-      target: 'https://www.google.com',
+      target: 'https://app.uniswap.org/',
     },
     {
-      label: 'Redirect to pictures',
-      action: 'post_redirect',
+      label: 'Link to Opensea',
+      action: 'link',
+      target: 'https://opensea.io/',
     },
   ],
   image: `${NEXT_PUBLIC_URL}/park-1.png`,
-  input: {
-    text: 'Tell me a boat story',
-  },
   post_url: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
+  title: 'erc404frame',
   description: 'LFG',
   openGraph: {
-    title: 'zizzamia.xyz',
+    title: 'erc404frame',
     description: 'LFG',
     images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
@@ -40,7 +38,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>erc404frame</h1>
     </>
   );
 }
